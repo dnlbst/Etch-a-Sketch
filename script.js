@@ -10,6 +10,14 @@ gridContainer.style.cssText = `
   `
 };
 
+//prompt for user input of grid size
+prmpt.addEventListener('click', e =>{
+  // removeGrid();
+  prompt = prompt("how many squares per side to make the new grid?", 32);
+  squares = prompt;
+  draw();
+});
+
 // filling the grid container with squares
 let fillGrid = function(){
   for (i = 0; i < squares ** 2; i++) {
@@ -19,13 +27,15 @@ let fillGrid = function(){
   };
 };
 
-// resetting the grid container squares
-let removeGrid = function(){
-  for (i = 0; i < squares ** 2; i++) {
-    gridContainer.removeChild('.gridItem');
-  };
-};
 
+
+// // resetting the grid container squares
+// let removeGrid = function(){
+//   square.forEach(foreachgridelement =>{
+//     let gridelement = document.getElementsByClassName(".grid-item");
+//     foreachgridelement.remove(gridelement);
+    
+//   });
  
 
 //changing and keeping the color after hovering those damn squares (took me while)
@@ -45,15 +55,6 @@ let draw = function(){
   fillGrid(); 
   changeClr();
 };
-draw();
 
-prmpt.addEventListener('click', e =>{
-    removeGrid();
-    prompt = prompt("how many squares per side to make the new grid?", 32);
-    squares = prompt;
-    draw();
-  });
-  
-  
 
-  
+
