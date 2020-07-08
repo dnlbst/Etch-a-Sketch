@@ -1,8 +1,8 @@
 let squares = 16; 
 const gridContainer = document.querySelector('.grid-container');
-const prmpt = document.querySelector('.prompt');
+const input = document.querySelector('.prompt');
 
-// creating the grid container depending on user input (prompt & button)
+// creating the grid container
 let buildContainer = function(){
 gridContainer.style.cssText = `
   grid-template-columns:  repeat(${squares}, 1fr);
@@ -11,14 +11,14 @@ gridContainer.style.cssText = `
 };
 
 //prompt for user input of grid size
-prmpt.addEventListener('click', e =>{
-  // removeGrid();
+input.addEventListener('click', e =>{
+  removeGrid();
   prompt = prompt("how many squares per side to make the new grid?", 32);
   squares = prompt;
   draw();
 });
 
-// filling the grid container with squares
+// filling the grid  with squares
 let fillGrid = function(){
   for (i = 0; i < squares ** 2; i++) {
     let gridItem = document.createElement('div');
@@ -26,35 +26,31 @@ let fillGrid = function(){
     gridContainer.appendChild(gridItem);
   };
 };
-
-
-
-// // resetting the grid container squares
-// let removeGrid = function(){
-//   square.forEach(foreachgridelement =>{
-//     let gridelement = document.getElementsByClassName(".grid-item");
-//     foreachgridelement.remove(gridelement);
-    
-//   });
  
-
-//changing and keeping the color after hovering those damn squares (took me while)
+//keeping the color after hovering
 let changeClr = function(){
-const square = document.querySelectorAll('.grid-item');
-
-square.forEach(foreachgriditem =>{
-      foreachgriditem.addEventListener('mouseover', e =>{
-        foreachgriditem.classList.add('grid-item--color'); // remember! no dot when adding a class!! 
+  const square = document.querySelectorAll('.grid-item');
+  square.forEach(foreachgriditem =>{
+        foreachgriditem.addEventListener('mouseover', e =>{
+          foreachgriditem.classList.add('grid-item--color'); // remember! no dot when adding a class!! 
+        });
       });
-    });
+    };
+
+// resetting the squares
+let removeGrid = function(){
+  let gridelement = document.querySelectorAll(".grid-item");
+      gridelement.forEach(forechsquare =>{
+        forechsquare.remove('div.gird-item');
+      })
   };
 
-//function to call all the functions above for grid drawing
+
+//function to draw squares
 let draw = function(){
   buildContainer();
   fillGrid(); 
   changeClr();
 };
 
-
-
+draw();
