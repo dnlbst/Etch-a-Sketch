@@ -1,13 +1,18 @@
 body{
-  background-color: rgb(228, 96, 96);
+  background-color: rgb(247, 215, 215);
 }
 
-
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  margin: 5px;
+}
 .grid-container {
   display: grid;
   width: 550px;
   height: 550px;
-  border: 5px solid rgb(204, 31, 204);
+  border: 5px solid rgb(10, 9, 10);
   margin: auto auto;
 }
 
@@ -45,14 +50,20 @@ body{
 button{
   text-align: center;
   font-size: 1.2em;
-  margin: 20px 0px;
+  margin: 15px 20px;
   padding: 10px 10px;
   max-width: 10em;
-  border: none;
-  background-color:rgb(144, 97, 182);
+  border: solid black 2px;
+  background-color:rgba(45, 202, 45, 0.1);
   border-radius: 2mm;
 }
 
-button:hover{
-  background-color: rgba(199, 75, 75,0.5);
+footer{
+  display: grid;
+  margin: 10px;
+}
+
+p{  
+  text-align: center;
+  font-size: 0.9rem;
 }

@@ -72,7 +72,7 @@ let grayClr = function(){
 //prompt for user input of grid size
 input.addEventListener('click', e =>{
   removeGrid();
-  squares = prompt("how many squares per side to make the new grid?", 32);
+  squares = prompt("enter number of squares per side", 32);
   draw();
 });
 
@@ -80,14 +80,14 @@ input.addEventListener('click', e =>{
 //random colour button
 random.addEventListener('click', e =>{
   removeGrid();
-  squares = prompt("how many squares per side to make the new grid?", 32);
+  squares = prompt("enter number of squares per side", 32);
   drawRdmClr();
 });
 
 //increasing gray button
 gray.addEventListener('click', e =>{
   removeGrid();
-  squares = prompt("how many squares per side to make the new grid?", 32);
+  squares = prompt("enter number of squares per side", 32);
   drawGray();
 });
 
