@@ -98,7 +98,7 @@ gray.addEventListener('click', e =>{
 let removeGrid = function(){
   let gridelement = document.querySelectorAll(".grid-item");
       gridelement.forEach(forechsquare =>{
-        forechsquare.remove('div.gird-item');
+        forechsquare.remove();
       })
   };
 
